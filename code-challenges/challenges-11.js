@@ -6,31 +6,24 @@
 // Resource:
 // Map: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
-// -------------------------------------------------------------------------------------------------------
-// Challenge 01:
-// Required:
+// 1) ---------------------
 // 
 // Given an array of values use map to calculate the square of the values.
 //  
-// Input: [ 2, 8, 3, 5 ]
-// Output: [ 4, 64, 9, 25 ]
+// EX:
+// [ 2, 8, 3, 5 ] ==> [ 4, 64, 9, 25 ]
 // 
+// -------------
 
 function square(arr) {
-    let map1=arr.map(x=>x*x)
+    // write your code here
+   let map1=arr.map(x=>x*x)
    return map1;
 }
-// -------------------------------------------------------------------------------------------------------
 
-// -------------------------------------------------------------------------------------------------------
-// Challenge 02:
-// Required:
+// 2) ------------------
 //
-// Given an array of objects of students' first and last name, use the map to return an array off students' full names.
-//
-// note: the full names should be combined between student's first and last names.
-//
-// Input:
+// Ex:
 // [
 //     {
 //         firstName: 'Adam',
@@ -76,7 +69,7 @@ function fullName(arr) {
 // and return an array of the objects with a new property called avg (that represent the average of the grades).
 //  
 
-// Input:
+// EX:
 // var students = [
 // 	{
 // 			firstName: 'Adam',
@@ -85,7 +78,7 @@ function fullName(arr) {
 // },
 // {
 // 			firstName: 'Ben',
-//      lastName: 'Zeller',
+//      lastNAme: 'Zeller',
 // 			gradsList: [20, 10, 11, 11, 2, 5, 3, 2]
 // },
 // {
@@ -95,13 +88,12 @@ function fullName(arr) {
 // },
 // {
 // 			firstName: 'Fred',
-//      lastName: 'Sagar',
+//      lastNAme: 'Sagar',
 // 			gradsList: [20, 10, 18, 11, 2, 20, 3, 10]
 // }
 // ]
-//
-// Output:
-// [
+// results =>
+//[
 // 	{
 // 			firstName: 'Adam',
 //      lastName: 'Anderson',
@@ -110,7 +102,7 @@ function fullName(arr) {
 // },
 // {
 // 			firstName: 'Ben',
-//      lastName: 'Zeller',
+//      lastNAme: 'Zeller',
 // 			gradsList: [20,10,11,11,2,5,3,2],
 //			avg: 8
 // },
@@ -122,7 +114,7 @@ function fullName(arr) {
 // },
 // {
 // 			firstName: 'Fred',
-//      lastName: 'Sagar',
+//      lastNAme: 'Sagar',
 // 			gradsList: [20,10,18,11,2,20,3,10],
 //      avg: 11.75
 // 	}
@@ -157,26 +149,25 @@ function gradesAvg(arr) {
 // },
 // {
 // 			firstName: 'Ben',
-//          lastName: 'Zeller',
+//      lastNAme: 'Zeller',
 // 			gradsList: [20,10,11,11,2,5,3,2],
 //			avg: 8
 // },
 // {
 // 			firstName: 'Peter',
-//          lastName: 'Mccord',
-// 	        gradsList: [62,50,80,90,39,45,60,50],
+//      lastName: 'Mccord',
+// 	    gradsList: [62,50,80,90,39,45,60,50],
 //			avg: 59.5
 // },
 // {
 // 			firstName: 'Fred',
-//          lastName: 'Sagar',
+//      lastNAme: 'Sagar',
 // 			gradsList: [20,10,18,11,2,20,3,10],
-//          avg: 11.75
+//      avg: 11.75
 // 	}
 //]
-// 
-// Output:
-// [
+// results =>
+//[
 // 	{
 // 			firstName: 'Adam',
 //      lastName: 'Anderson',
@@ -186,7 +177,7 @@ function gradesAvg(arr) {
 // },
 // {
 // 			firstName: 'Ben',
-//      lastName: 'Zeller',
+//      lastNAme: 'Zeller',
 // 			gradsList: [20,10,11,11,2,5,3,2],
 //			avg: 8,
 //      result: 'Failed'
@@ -200,16 +191,15 @@ function gradesAvg(arr) {
 // },
 // {
 // 			firstName: 'Fred',
-//      lastName: 'Sagar',
+//      lastNAme: 'Sagar',
 // 			gradsList: [20,10,18,11,2,20,3,10],
 //      avg: 11.75,
 //      result: 'Failed'
 // 	}
-// ]
+//]
+// -------------
 
 function studentsResult(arr) {
     // write your code here
 }
-// -------------------------------------------------------------------------------------------------------
-
 module.exports = { square, fullName, gradesAvg, studentsResult };

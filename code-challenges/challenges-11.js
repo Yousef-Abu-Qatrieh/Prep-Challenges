@@ -47,21 +47,24 @@ function square(arr) {
 //     }
 // ]
 //
-//
-// Output ==>['Adam Anderson', 'Ben Zeller', 'Peter Mccord', 'Fred Sagar', 'Nathan Weiss']
-// 
-//
-// Given an array of objects of student's first and last name, use the map to return an array off student's full names.
-//
-// note: the full names should be combined between student's first and last names.
-//
+// Output: ['Adam Anderson', 'Ben Zeller', 'Peter Mccord', 'Fred Sagar', 'Nathan Weiss']
 
 function fullName(arr) {
-    // write your code here
-}
+    
+      
+      
+     let names = arr.map((cv) => (
+        `${`${cv.firstName}` || ""} ${cv.lastName || ""}`
 
-// 3) ---------------------
-// 
+      ))
+      return names
+}
+// -------------------------------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------------------------------
+// Challenge 03:
+// Required:
+
 // Given an array of objects use map to calculate the average of the grades 
 // and return an array of the objects with a new property called avg (that represent the average of the grades).
 //  
@@ -119,21 +122,28 @@ function fullName(arr) {
 // -------------
 
 function gradesAvg(arr) {
-    // write your code here
+  let  studentData = arr.map((cv) => ({
+        firstName:`${cv.firstName}`, lastName:`${cv.lastName}`,
+        gradsList: cv.gradsList,avg:cv.gradsList.reduce((partialSum, a) => partialSum + a, 0)/cv.gradsList.length
+      }));
+      return studentData
 }
+// -------------------------------------------------------------------------------------------------------
 
-
-// 4) ---------------------
+// -------------------------------------------------------------------------------------------------------
+// Challenge 04:
+// Optional:
 //
 // Using the previous function result, determine if the student pass or failed,
-// and return the array of the object with a new property called result (with Passed or Failed)//  
+// and return the array of the objects with a new property called result (with Passed or Failed) 
 //
-//	note : if his/her avg equal or above 50 the result will be Passed, and Failed if it's less than that
-// EX:
+// Note: if his/her avg equal or above 50 the result will be Passed, and Failed if it's less than that
+
+// Input:
 // var students = [
 // 	{
 // 			firstName: 'Adam',
-//      lastName: 'Anderson',
+//          lastName: 'Anderson',
 // 			gradsList: [20,50,13,11,2,45,60,29],
 // 			avg: 28.75
 // },
@@ -192,5 +202,4 @@ function gradesAvg(arr) {
 function studentsResult(arr) {
     // write your code here
 }
-
 module.exports = { square, fullName, gradesAvg, studentsResult };

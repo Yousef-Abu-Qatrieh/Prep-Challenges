@@ -67,8 +67,24 @@ const LastWord_2 = (str) => {
 //
 
 const replaceWords = (str) => {
-    // write your code here
-}
+        let lookup = [
+          { character: "I", toReplaceWith: "We" },
+          { character: "am", toReplaceWith: "are" },
+          { character: "was", toReplaceWith: "were" },
+        ];
+      
+        let stringAsArray = str.split(" ");
+      
+        lookup.map((characterInfo) => {
+          const characterIndex = stringAsArray.indexOf(characterInfo.character);
+          if (characterIndex !== -1) {
+            stringAsArray.splice(characterIndex, 1, characterInfo.toReplaceWith);
+          }
+        });
+      
+        return stringAsArray.join(" ");
+      };
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------

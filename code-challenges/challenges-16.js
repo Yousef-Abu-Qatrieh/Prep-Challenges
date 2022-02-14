@@ -29,23 +29,15 @@ const reverseString = (string) => {
 // Input <= ["hello ^_^ ","Hi ^_^" ,"What's up ^_-" ,"lol"] , Output => ["hello ^_^ ","Hi ^_^" ] ;
 
 const detectFace = (arr) => {
-
-// let stringAsArray = arr.split(",");
-// let newArray = arr.map(function(v){
-//     return v[0].split(",");
-let a=[]
-        for(let i = 0; i<arr.length; i++) {
-           arr[i] = arr[i].split(",").find(a =>a.includes("^_^"));  
-           a.push(arr[i])
-    }
- 
-    
-
+let newArr=[]
+  arr.forEach(value=>{
+if(value.includes("^_^")){
+   newArr.push(value)
      
-    
-    console.log(a)
-    
-     return a
+}
+
+})
+return newArr
 }
 // -------------------------------------------------------------------------------------------------------
 

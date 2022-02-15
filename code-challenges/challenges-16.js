@@ -29,6 +29,18 @@ const reverseString = (string) => {
 // Input <= ["hello ^_^ ","Hi ^_^" ,"What's up ^_-" ,"lol"] , Output => ["hello ^_^ ","Hi ^_^" ] ;
 
 const detectFace = (arr) => {
+
+    let newArr=[]
+      arr.forEach(value=>{
+    if(value.includes("^_^")){
+       newArr.push(value)
+         
+    }
+    
+    })
+    return newArr
+    }
+=======
 let newArr=[]
   arr.forEach(value=>{
 if(value.includes("^_^")){
@@ -39,6 +51,7 @@ if(value.includes("^_^")){
 })
 return newArr
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 
